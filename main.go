@@ -1,0 +1,17 @@
+package main
+
+import (
+	"github.com/gin-gonic/gin"
+	"log"
+)
+
+func main() {
+	router := gin.Default()
+	router.GET("/ping", func(context *gin.Context) {
+		context.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+	// listen and serve on 0.0.0.0:8080
+	log.Fatalln(router.Run())
+}
