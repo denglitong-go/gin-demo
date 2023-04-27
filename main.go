@@ -19,5 +19,6 @@ func showQuickStart() {
 
 func main() {
 	// showQuickStart()
-	examples.ShowAsciiJSON()
+	// examples.ShowAsciiJSON()
+	examples.ShowBindDataRequestWithCustomStruct()
 }
