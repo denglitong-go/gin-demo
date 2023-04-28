@@ -64,20 +64,20 @@ func getDataD(context *gin.Context) {
 	})
 }
 
-func ShowBindDataRequestWithCustomStruct() {
+func ShowBindDataRequestWithCustomStruct() error {
 	r := gin.Default()
 
-	// curl "http://localhost:8080/getb?field_a=hello&field_b=world"
+	// curl "http://localhost:8082/getb?field_a=hello&field_b=world"
 	// return: {"a":{"FieldA":"hello"},"b":"world"}
 	r.GET("/getb", getDataB)
 
-	// curl "http://localhost:8080/getc?field_a=hello&field_c=world"
+	// curl "http://localhost:8082/getc?field_a=hello&field_c=world"
 	// return: {"a":{"FieldA":"hello"},"c":"world"}
 	r.GET("/getc", getDataC)
 
-	// curl "http://localhost:8080/getd?field_x=hello&field_d=world&field_a=go"
+	// curl "http://localhost:8082/getd?field_x=hello&field_d=world&field_a=go"
 	// return: {"d":"world","x":{"FieldX":"hello","NestedStruct":{"FieldA":"go"}}}
 	r.GET("/getd", getDataD)
 
-	log.Fatalln(r.Run())
+	return r.Run(":8082")
 }

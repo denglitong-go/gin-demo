@@ -2,11 +2,10 @@ package examples
 
 import (
 	"github.com/gin-gonic/gin"
-	"log"
 	"net/http"
 )
 
-func ShowAsciiJSON() {
+func ShowAsciiJSON() error {
 	r := gin.Default()
 
 	r.GET("/someJSON", func(context *gin.Context) {
@@ -17,5 +16,5 @@ func ShowAsciiJSON() {
 		context.AsciiJSON(http.StatusOK, data)
 	})
 
-	log.Fatalln(r.Run())
+	return r.Run(":8081")
 }

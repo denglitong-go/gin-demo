@@ -23,14 +23,14 @@ func handleForm(ctx *gin.Context) {
 	})
 }
 
-func ShowBindHtmlCheckBoxes() {
+func ShowBindHtmlCheckBoxes() error {
 	r := gin.Default()
 
-	// curl --location 'http://localhost:8080/form' \
+	// curl --location 'http://localhost:8083/form' \
 	// --header 'Content-Type: application/json' \
 	// --data '{"name":"go","colors":["red","green","blue"]}'
 	// return: {"colors":["red","green","blue"],"name":"go"}
 	r.POST("/form", handleForm)
 
-	log.Fatalln(r.Run())
+	return r.Run(":8083")
 }
