@@ -21,5 +21,6 @@ func main() {
 	// showQuickStart()
 	// examples.ShowAsciiJSON()
 	// examples.ShowBindDataRequestWithCustomStruct()
-	examples.ShowBindHtmlCheckBoxes()
+	// examples.ShowBindHtmlCheckBoxes()
+	examples.ShowBindQueryStringOrPostData()
 }
