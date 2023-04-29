@@ -30,6 +30,7 @@ func main() {
 	g.Go(examples.ShowBindHtmlCheckBoxes)
 	g.Go(examples.ShowBindQueryStringOrPostData)
 	g.Go(examples.ShowBindUri)
+	g.Go(examples.ShowBuildSingleBinaryWithAssertTemplate)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
