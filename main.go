@@ -32,6 +32,7 @@ func main() {
 	g.Go(examples.ShowBindUri)
 	g.Go(examples.ShowBuildSingleBinaryWithAssertTemplate)
 	g.Go(examples.ShowControlLogOutputColor)
+	g.Go(examples.ShowCustomHttpConfiguration)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
