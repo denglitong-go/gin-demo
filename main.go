@@ -31,6 +31,7 @@ func main() {
 	g.Go(examples.ShowBindQueryStringOrPostData)
 	g.Go(examples.ShowBindUri)
 	g.Go(examples.ShowBuildSingleBinaryWithAssertTemplate)
+	g.Go(examples.ShowControlLogOutputColor)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
