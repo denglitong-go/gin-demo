@@ -35,6 +35,7 @@ func main() {
 	g.Go(examples.ShowCustomHttpConfiguration)
 	g.Go(examples.ShowCustomLogFile)
 	g.Go(examples.ShowCustomMiddleware)
+	g.Go(examples.ShowCustomValidators)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
