@@ -36,6 +36,7 @@ func main() {
 	g.Go(examples.ShowCustomLogFile)
 	g.Go(examples.ShowCustomMiddleware)
 	g.Go(examples.ShowCustomValidators)
+	g.Go(examples.ShowDefineRoutesLogFormat)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
