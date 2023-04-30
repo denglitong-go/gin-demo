@@ -34,6 +34,7 @@ func main() {
 	g.Go(examples.ShowControlLogOutputColor)
 	g.Go(examples.ShowCustomHttpConfiguration)
 	g.Go(examples.ShowCustomLogFile)
+	g.Go(examples.ShowCustomMiddleware)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
