@@ -39,6 +39,7 @@ func main() {
 	g.Go(examples.ShowDefineRoutesLogFormat)
 	g.Go(examples.ShowGoroutinesInsideAMiddleware)
 	g.Go(examples.ShowGracefulRestartOrStop)
+	g.Go(examples.ShowGroupingRoutes)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
