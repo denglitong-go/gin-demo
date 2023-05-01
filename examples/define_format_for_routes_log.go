@@ -19,13 +19,13 @@ func ShowDefineRoutesLogFormat() error {
 	}
 
 	r.POST("/foo", func(c *gin.Context) {
-		c.JSON(http.StatusOK, "foo")
+		c.String(http.StatusOK, "foo")
 	})
 	r.GET("/bar", func(c *gin.Context) {
-		c.JSON(http.StatusOK, "BAR")
+		c.String(http.StatusOK, "BAR")
 	})
 	r.GET("/status", func(c *gin.Context) {
-		c.JSON(http.StatusOK, "ok")
+		c.String(http.StatusOK, "ok")
 	})
 
 	return r.Run(":8092")
