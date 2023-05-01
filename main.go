@@ -40,6 +40,7 @@ func main() {
 	g.Go(examples.ShowGoroutinesInsideAMiddleware)
 	g.Go(examples.ShowGracefulRestartOrStop)
 	g.Go(examples.ShowGroupingRoutes)
+	g.Go(examples.ShowHowToWriteLogFile)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
