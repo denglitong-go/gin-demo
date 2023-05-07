@@ -38,9 +38,10 @@ func main() {
 	g.Go(examples.ShowCustomValidators)
 	g.Go(examples.ShowDefineRoutesLogFormat)
 	g.Go(examples.ShowGoroutinesInsideAMiddleware)
-	g.Go(examples.ShowGracefulRestartOrStop)
+	// g.Go(examples.ShowGracefulRestartOrStop)
 	g.Go(examples.ShowGroupingRoutes)
 	g.Go(examples.ShowHowToWriteLogFile)
+	g.Go(examples.ShowHtmlRendering)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
