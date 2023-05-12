@@ -42,6 +42,7 @@ func main() {
 	g.Go(examples.ShowGroupingRoutes)
 	g.Go(examples.ShowHowToWriteLogFile)
 	g.Go(examples.ShowHtmlRendering)
+	g.Go(examples.ShowJsonPadding)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
