@@ -1,12 +1,16 @@
 package examples
 
 import (
+	"flag"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 )
 
+var uploadDir = flag.String("upload_dir", "./upload", "dir to upload files")
+
+// go run . --upload_dir=/Users/litong.deng/Downloads
 func ShowUploadFile() error {
 	r := gin.New()
 
@@ -26,7 +30,7 @@ func ShowUploadFile() error {
 		files := form.File["upload[]"]
 		for _, file := range files {
 			log.Println(file.Filename)
-			dst := fmt.Sprintf("./upload/%v", file.Filename)
+			dst := fmt.Sprintf("%s/%s", *uploadDir, file.Filename)
 			if err := c.SaveUploadedFile(file, dst); err != nil {
 				c.String(http.StatusInternalServerError, err.Error())
 			}
