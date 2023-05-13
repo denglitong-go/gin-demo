@@ -43,6 +43,7 @@ func main() {
 	g.Go(examples.ShowHowToWriteLogFile)
 	g.Go(examples.ShowHtmlRendering)
 	g.Go(examples.ShowJsonPadding)
+	g.Go(examples.ShowMapAsQueryStringOrPostFormParams)
 
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
