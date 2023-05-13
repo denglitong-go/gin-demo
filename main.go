@@ -66,6 +66,8 @@ func main() {
 	// Support Let's Encrypt
 	// Try to bind body into different structs
 	// Upload files
+	g.Go(examples.ShowUploadFile)
+
 	// Using BasicAuth middleware
 	// Using HTTP method
 	// Using middleware
