@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	TPL_SUFFIX = ".html"
+	TPL_SUFFIX = ".htm"
 )
 
 func LoadTemplates() (*template.Template, error) {

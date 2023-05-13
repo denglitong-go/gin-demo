@@ -30,13 +30,13 @@ func ShowBuildSingleBinaryWithAssertTemplate() error {
 }
 
 func serveIndexPage(ctx *gin.Context) {
-	ctx.HTML(http.StatusOK, "/index.html", gin.H{
+	ctx.HTML(http.StatusOK, "/index.htm", gin.H{
 		"Foo": "World",
 	})
 }
 
 func serveBarPage(ctx *gin.Context) {
-	ctx.HTML(http.StatusOK, "/bar.html", gin.H{
+	ctx.HTML(http.StatusOK, "/bar.htm", gin.H{
 		"Bar": "World",
 	})
 }

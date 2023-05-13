@@ -45,6 +45,33 @@ func main() {
 	g.Go(examples.ShowJsonPadding)
 	g.Go(examples.ShowMapAsQueryStringOrPostFormParams)
 
+	// TODO
+	// Model biding and validation
+	// Multipart/Urlencoded binding
+	// Multipart/Urlencoded form
+	// Multi template
+	// Only bind query string
+	// Parameters in path
+	// PureJSON
+	// Query and post form
+	// Query string params
+	// Redirects
+	// Run multiple service
+	// SecureJSON
+	// Serving data from reader
+	// Serving static files
+	g.Go(examples.ShowServingStaticFiles)
+
+	// Set and get a cookie
+	// Support Let's Encrypt
+	// Try to bind body into different structs
+	// Upload files
+	// Using BasicAuth middleware
+	// Using HTTP method
+	// Using middleware
+	// Without middleware by default
+	// XML/JSON/YAML/ProtoBuf rendering
+
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
 	}
